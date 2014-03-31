@@ -1,0 +1,19 @@
+<h1>Listing locations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Country</th>
+      <th>Customer Count</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.country %></td>
+        <td><%= link_to location.customers_count, customers_path %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

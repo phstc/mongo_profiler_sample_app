@@ -6,15 +6,17 @@
       <th>First name</th>
       <th>Last name</th>
       <th>Email</th>
+      <th>Location / Country</th>
     </tr>
   </thead>
 
   <tbody>
     <% @customers.each do |customer| %>
       <tr>
-        <td><%= customer['first_name'] %></td>
-        <td><%= customer['last_name'] %></td>
-        <td><%= customer['email'] %></td>
+        <td><%= customer.first_name %></td>
+        <td><%= customer.last_name %></td>
+        <td><%= customer.email %></td>
+        <td><%= link_to customer.location.country, locations_path %></td>
       </tr>
     <% end %>
   </tbody>

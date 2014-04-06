@@ -43,10 +43,11 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'mongo'
 gem 'bson_ext'
+
 gem 'mongo_profiler', github: 'phstc/mongo_profiler'
-# gem 'mongo_profiler', path: '../mongo_profiler'
-gem 'faker'
 gem 'sinatra'
+
+gem 'faker'
 
 group :test, :development do
   gem 'pry-byebug'

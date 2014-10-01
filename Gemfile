@@ -41,8 +41,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'mongo'
-gem 'bson_ext'
+gem 'mongoid'
 
 gem 'mongo_profiler', github: 'phstc/mongo_profiler'
 gem 'sinatra'

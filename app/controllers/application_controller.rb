@@ -3,15 +3,9 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_filter :mongo_profiler_setup
+  before_filter :set_mongo_profile_group_name
 
-  private
-
-  def mongo_profiler_setup
-    # aggregate queries by request
-    MongoProfiler.group_id = "request-#{request.uuid}"
-
-    # to show the request url
-    MongoProfiler.extra_attrs[:request_url] = request.url
+  def set_mongo_profile_group_name
+    MongoProfiler.current_group_name = request.url
   end
 end

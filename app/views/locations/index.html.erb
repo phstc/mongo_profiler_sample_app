@@ -1,5 +1,3 @@
-<h1>Listing locations</h1>
-
 <table>
   <thead>
     <tr>
@@ -11,8 +9,8 @@
   <tbody>
     <% @locations.each do |location| %>
       <tr>
-        <td><%= location.country %></td>
-        <td><%= link_to location.customers_count, customers_path %></td>
+        <td><%= link_to location.country, locations_path(country: location.country) %></td>
+        <td><%= link_to location.customers.count, customers_path(location_id: location.id) %></td>
       </tr>
     <% end %>
   </tbody>

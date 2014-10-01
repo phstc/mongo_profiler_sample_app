@@ -1,21 +1,8 @@
 class Location
-  attr_reader :id
-  attr_accessor :country
+  include Mongoid::Document
+  include Mongoid::Timestamps
 
-  def initialize(attributes)
-    @id = attributes['_id']
-    @country = attributes['country']
-  end
+  field :country
 
-  def customers_count
-    DB['customers'].find(location_id: id).count
-  end
-
-  def self.all
-    DB['locations'].find.map &method(:new)
-  end
-
-  def self.find_by_id(id)
-    new(DB['locations'].find_one(_id: id))
-  end
+  has_many :customers
 end

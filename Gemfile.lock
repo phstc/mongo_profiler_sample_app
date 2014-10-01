@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/phstc/mongo_profiler.git
-  revision: 37787a4fc91b506b5cc998d11b300a20f804b884
+  revision: fc41cc1014138e667f811402a98687c993ee7ab0
   specs:
     mongo_profiler (0.0.1)
       activesupport
@@ -34,9 +34,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     atomic (1.1.16)
-    bson (1.9.2)
-    bson_ext (1.9.2)
-      bson (~> 1.9.2)
+    bson (2.3.0)
     builder (3.1.4)
     byebug (2.7.0)
       columnize (~> 0.3)
@@ -50,6 +48,7 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     columnize (0.3.6)
+    connection_pool (2.0.0)
     debugger-linecache (1.2.0)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -70,9 +69,18 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (4.7.5)
-    mongo (1.9.2)
-      bson (~> 1.9.2)
+    mongoid (4.0.0)
+      activemodel (~> 4.0)
+      moped (~> 2.0.0)
+      origin (~> 2.1)
+      tzinfo (>= 0.3.37)
+    moped (2.0.0)
+      bson (~> 2.2)
+      connection_pool (~> 2.0)
+      optionable (~> 0.2.0)
     multi_json (1.9.2)
+    optionable (0.2.0)
+    origin (2.1.1)
     polyglot (0.3.4)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -148,13 +156,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bson_ext
   coffee-rails (~> 4.0.0)
   faker
   jbuilder (~> 1.2)
   jquery-rails
-  mongo
   mongo_profiler!
+  mongoid
   pry-byebug
   rails (= 4.0.4)
   rails_12factor

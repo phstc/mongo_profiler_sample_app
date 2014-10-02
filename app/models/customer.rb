@@ -9,4 +9,5 @@ class Customer
   belongs_to :location
 
   index location_id: 1
+  index email: 1
 end

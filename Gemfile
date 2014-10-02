@@ -43,8 +43,8 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'mongoid'
 
-gem 'mongo_profiler', github: 'phstc/mongo_profiler'
-gem 'sinatra'
+gem 'mongo_profiler', github: 'phstc/mongo_profiler', require: nil
+gem 'sinatra', require: nil
 
 gem 'faker'
 

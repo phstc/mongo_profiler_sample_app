@@ -4,8 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :set_mongo_profile_group_name
+  # before_filter :set_mongo_profile_group_name, unless: -> { Rails.env.production? }
 
   def set_mongo_profile_group_name
+    require 'mongo_profiler'
     MongoProfiler.current_group_name = request.url
   end
 end

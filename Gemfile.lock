@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/phstc/mongo_profiler.git
-  revision: d76658441032fa11b17304ace663d8799aeb10c4
+  revision: 4e5e53b2f3d6755b4eb7b04efc59ed9f3f3647cb
   specs:
     mongo_profiler (0.0.2)
       activesupport
